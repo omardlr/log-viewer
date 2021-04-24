@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavbarTop from '../NavbarTop';
 import Siderbar from '../Siderbar';
-import Footer from '../Footer';
 
 const AuthLayout = ({ children }) => {
 	return (
@@ -11,10 +10,17 @@ const AuthLayout = ({ children }) => {
 			<div id="layoutSidenav">
 				<Siderbar userFullName="José Maldonado" />
 				<div id="layoutSidenav_content">
-					<main>
-						{children}
-					</main>
-					<Footer />
+					<main>{children}</main>
+					<footer className="footer mt-auto footer-light">
+						<div className="container-fluid">
+							<div className="row">
+								<div className="col-md-6 small">Copyright © JOMA 2020</div>
+								<div className="col-md-6 text-md-right small">
+									<a href="#!">Privacy Policy</a>·<a href="#!">Terms &amp; Conditions</a>
+								</div>
+							</div>
+						</div>
+					</footer>
 				</div>
 			</div>
 		</>
