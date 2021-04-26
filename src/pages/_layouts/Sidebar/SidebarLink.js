@@ -2,7 +2,7 @@ import React from 'react';
 import FeatherIcon from 'feather-icons-react';
 import { Link, useRouteMatch } from 'react-router-dom';
 
-const SiderbarLink = ({ activeOnlyWhenExact, to, label, icon, badge }) => {
+const SidebarLink = ({ activeOnlyWhenExact, to, text, icon, badge }) => {
     let match = useRouteMatch({
 		path: to,
 		exact: activeOnlyWhenExact,
@@ -18,10 +18,10 @@ const SiderbarLink = ({ activeOnlyWhenExact, to, label, icon, badge }) => {
 				null
 			)}
 
-			{label}
+			{text}
 			{badge ? <span className="badge badge-primary-soft text-primary ml-auto">{badge}</span> : null}
 		</Link>
 	);
 };
 
-export default SiderbarLink;
+export default SidebarLink;

@@ -2,10 +2,10 @@ import React from 'react';
 import FeatherIcon from 'feather-icons-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import SiderbarLink from './SiderbarLink';
+import SidebarLink from './SidebarLink';
 
-const SiderbarCollapseLink = ({ label, icon, subItems }) => {
-	let Id = `collapse${label.replace(' ', '')}`;
+const SidebarCollapseLink = ({ text, icon, subItems }) => {
+	let Id = `collapse${text.replace(' ', '')}`;
 	let Target = `#${Id}`;
 
 	return (
@@ -21,7 +21,7 @@ const SiderbarCollapseLink = ({ label, icon, subItems }) => {
 				<div className="nav-link-icon">
 					<FeatherIcon icon={icon} size={16} />
 				</div>
-				{label}
+				{text}
 				<div className="sidenav-collapse-arrow">
 					<FontAwesomeIcon icon={faAngleDown} />
 				</div>
@@ -29,10 +29,10 @@ const SiderbarCollapseLink = ({ label, icon, subItems }) => {
 			<div className="collapse" id={Id} data-parent="#accordionSidenav">
 				<nav className="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
 					{subItems.map((item,index) => (
-						<SiderbarLink
+						<SidebarLink
 							key={index}
 							to={item.to}
-							label={item.label}
+							text={item.text}
 							activeOnlyWhenExact={item.exact}
 							icon={item.icon}
 							badge={item.badge}
@@ -44,5 +44,5 @@ const SiderbarCollapseLink = ({ label, icon, subItems }) => {
 	);
 };
 
-export default SiderbarCollapseLink;
+export default SidebarCollapseLink;
 
