@@ -2,10 +2,10 @@ import React from 'react';
 import SiderbarSection from './SiderbarSection';
 import SiderbarItem from './SiderbarItem';
 
-const SiderbarContainerItem = ({ textSection, items }) => {
+const SiderbarContainerItem = ({ titleSection, items }) => {
 	return (
 		<>
-			<SiderbarSection text={textSection} />
+			<SiderbarSection text={titleSection} />
 			{!items
 				? null
 				: items.map((item) => (

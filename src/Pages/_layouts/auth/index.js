@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import HeaderCompact from '../Header/HeaderPageCompact';
+// import HeaderSimplified from '../Header/HeaderPageSimplified';
 import NavbarTop from '../NavbarTop';
 import Siderbar from '../Siderbar';
 
@@ -10,6 +12,7 @@ const AuthLayout = ({ children }) => {
 			<div id="layoutSidenav">
 				<Siderbar userFullName="José Maldonado" />
 				<div id="layoutSidenav_content">
+					<HeaderCompact title="Dashboard" icon="activity" />
 					<main>{children}</main>
 					<footer className="footer mt-auto footer-light">
 						<div className="container-fluid">
