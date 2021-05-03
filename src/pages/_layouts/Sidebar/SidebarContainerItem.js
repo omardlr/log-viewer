@@ -1,18 +1,18 @@
 import React from 'react';
-import SiderbarSection from './SiderbarSection';
-import SiderbarItem from './SiderbarItem';
+import SidebarSection from './SidebarSection';
+import SidebarItem from './SidebarItem';
 
-const SiderbarContainerItem = ({ titleSection, items }) => {
+const SidebarContainerItem = ({ textSection, items }) => {
 	return (
 		<>
-			<SiderbarSection text={titleSection} />
+			<SidebarSection text={textSection} />
 			{!items
 				? null
 				: items.map((item) => (
-						<SiderbarItem
+						<SidebarItem 
 							key={item.id}
 							to={item.to}
-							label={item.label}
+							text={item.text}
 							activeOnlyWhenExact={item.exact}
 							icon={item.icon}
                             badge={item.badge}
@@ -23,4 +23,4 @@ const SiderbarContainerItem = ({ titleSection, items }) => {
 	);
 };
 
-export default SiderbarContainerItem;
+export default SidebarContainerItem;

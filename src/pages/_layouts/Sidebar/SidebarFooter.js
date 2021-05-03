@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SiderbarFooter = ({userFullName}) => (
+export const SidebarFooter = ({userFullName}) => (
 	<div className="sidenav-footer">
 		<div className="sidenav-footer-content">
 			<div className="sidenav-footer-subtitle">Logged in as:</div>
