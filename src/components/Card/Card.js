@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ title, children }) => (
-	<div className="card">
+const Card = ({ title, className, children }) => (
+	<div className={`card ${className}`}>
 		{title && <div className="card-header">{title}</div>}
 		<div className="card-body">{children}</div>
 	</div>

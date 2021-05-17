@@ -15,9 +15,9 @@ const HeaderPageCompact = ({ title, icon }) => (
 						</h1>
 					</div>
 					<div className="col-12 col-xl-auto mb-3">
-						{/* <button className="btn btn-sm btn-light text-primary active mr-2">Today</button>
+						<button className="btn btn-sm btn-light text-primary active mr-2">Today</button>
 						<button className="btn btn-sm btn-light text-primary mr-2">Month</button>
-						<button className="btn btn-sm btn-light text-primary">Year</button> */}
+						<button className="btn btn-sm btn-light text-primary">Year</button>
 					</div>
 				</div>
 			</div>
