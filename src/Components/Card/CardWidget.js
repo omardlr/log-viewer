@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import FeatherIcon from 'feather-icons-react';
 import Card from './Card';
 
-const CardWidget = ({ text, icon, value, valuePorcent, dummy }) => {
+const CardWidget = ({ text, borderColor,icon, value, valuePorcent, dummy }) => {
 	const iconPorcent = dummy > 0? 'trending-up' : 'trending-down';
 	const textColorPorcent = dummy > 0? 'text-success' : 'text-danger';
 	return (
-		<Card className="border-top-0 border-bottom-0 border-right-0 border-left-lg border-primary h-100">
+		<Card className={`border-top-0 border-bottom-0 border-right-0 border-left-lg ${borderColor} border-primary h-100`>
 			<div className="d-flex align-items-center">
 				<div className="flex-grow-1">
 					<div className="small font-weight-bold text-primary mb-1">
