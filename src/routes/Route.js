@@ -7,7 +7,6 @@ import AuthLayout from "../pages/_layouts/auth";
 
 const RouteWrapper = ({ component: Component, isPrivate, ...rest }) => {
 	const signed = true;
-	console.log("dentro de RouteWrapper");
 	/**
 	 * Redirect user to SignIn page if he tries to access a private route
 	 * without authentication.

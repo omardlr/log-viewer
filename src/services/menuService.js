@@ -7,6 +7,7 @@ const menuService = {
 				items: [
 					{ id: 1, text: 'Home', to: '/', exact: true, icon: 'home' },
 					{ id: 2, text: 'User', to: '/User', icon: 'user' },
+					{ id: 3, text: 'General Settings', to: '/Settings', icon: 'settings'}
 				],
 			},
 			{
