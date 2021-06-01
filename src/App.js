@@ -1,7 +1,7 @@
 import React,{ useEffect } from 'react';
 import { Router } from 'react-router-dom';
 import $ from 'jquery';
-import Routes from './routes';
+import Routes from './Routes';
 
 import { createBrowserHistory } from "history";
 

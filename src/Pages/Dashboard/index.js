@@ -1,7 +1,7 @@
 import React from 'react';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import CardWidget from '../../components/Card/CardWidget';
+import CardWidget from '../../Components/Card/CardWidget';
 
 const Dashboard = () => {
 	const hey = <FontAwesomeIcon icon={faDollarSign} className="fa-w-9 fa-2x text-gray-200" />;

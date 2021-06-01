@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import HeaderCompact from '../Header/HeaderPageCompact';
 // import HeaderSimplified from '../Header/HeaderPageSimplified';
 import NavbarTop from '../NavbarTop';
-import Sidebar from '../Sidebar';
+import Sidebar from '../Siderbar/index';
 
 const AuthLayout = ({ children }) => {
 	return (
