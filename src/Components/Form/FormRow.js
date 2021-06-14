@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const FormRow = (props) => (
+export const FormRow = ({children}) => (
     <div className="form-row">
-        {props.children}
+        {children}
     </div>
 );

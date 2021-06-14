@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const FormGroup = (props) => (
+export const FormGroup = ({children}) => (
     <div className="col form-group">
-        {props.children}
+        {children}
     </div>
 );

@@ -7,7 +7,6 @@ import SidebarList from './SidebarList';
 	const [items,setItems] = useState([]);
 
 	useEffect(() => {
-		console.log('useEffect');
 		//TODO: Check this;
 		setItems(menuService.GetMenu());
 	},[])

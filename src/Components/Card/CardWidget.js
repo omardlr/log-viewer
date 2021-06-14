@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import FeatherIcon from 'feather-icons-react';
-import Card from './Card';
+import Card from './index';
 
 const CardWidget = ({ text, icon, value, valuePorcent, dummy }) => {
 	const iconPorcent = dummy > 0? 'trending-up' : 'trending-down';
@@ -48,6 +48,6 @@ const CardWidget = ({ text, icon, value, valuePorcent, dummy }) => {
 	);
 };
 
-CardWidget.propTypes = {};
+// CardWidget.propTypes = {};
 
 export default CardWidget;

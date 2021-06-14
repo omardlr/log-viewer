@@ -12,8 +12,12 @@ const AuthLayout = ({ children }) => {
 			<div id="layoutSidenav">
 				<Sidebar userFullName="José Maldonado" />
 				<div id="layoutSidenav_content">
-					<HeaderCompact title="Dashboard" icon="activity" />
-					<main>{children}</main>
+					<main>
+						<HeaderCompact title="Dashboard" icon="activity" />
+						<div class="container-xl px-4">
+						{children}
+						</div>
+					</main>
 					<footer className="footer mt-auto footer-light">
 						<div className="container-fluid">
 							<div className="row">

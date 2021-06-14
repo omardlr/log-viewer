@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { validateInput } from '../../common/Validator';
+// import { validateInput } from '../../common/Validator';
 
 export const InputField = ({ name, value, label, placeholder, validators, type, onChange,controlClass }) => {
-	const [error, setError] = useState(false);
+	//const [error, setError] = useState(false);
 
 	const handleChange = event => {
 		const { value } = event.target;
-		setError(validateInput(validators, value));
+		//setError(validateInput(validators, value));
 		onChange(value);
 	};
 
@@ -36,7 +36,7 @@ export const InputField = ({ name, value, label, placeholder, validators, type, 
 					onChange={onChange}
 				/>
 			)}
-			{error && <span className="text-danger">{error.message}</span>}
+			{/* {error && <span className="text-danger">{error.message}</span>} */}
 		</>
 	);
 };

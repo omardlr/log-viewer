@@ -1,18 +1,18 @@
 import React from 'react';
 
-export const RadioButton = props => {
+export const RadioButton = (id,name,label,changed,value,isSelected) => {
 	return (
 		<label className="custom-control custom-radio custom-control-inline">
 			<input
 				className="custom-control-input"
-                id={props.id}
-                name={props.name}
-                onChange={props.changed}
-                value={props.value}
-				checked={props.isSelected}
+                id={id}
+                name={name}
+                onChange={changed}
+                value={value}
+				checked={isSelected}
 				type="radio"				
 			/>
-			<span className="custom-control-label"> {props.label} </span>
+			<span className="custom-control-label"> {label} </span>
 		</label>
 	);
 };

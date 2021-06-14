@@ -1,14 +1,14 @@
-import React,{ useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Router } from 'react-router-dom';
 import $ from 'jquery';
 import Routes from './Routes';
 
-import { createBrowserHistory } from "history";
+import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory();
 
-function App() {
-  useEffect(() => {
+const App = () =>{
+	useEffect(() => {
 		// Enable Bootstrap tooltips via data-attributes globally
 		$('[data-toggle="tooltip"]').tooltip();
 
@@ -92,11 +92,11 @@ function App() {
 			$('[data-target="#' + this.id + '"]').removeClass('collapsed');
 		});
 	}, []);
-  return (
-    <Router history={history} >
+	return (
+		<Router history={history}>
 			<Routes />
 		</Router>
-  );
+	);
 }
 
 export default App;
