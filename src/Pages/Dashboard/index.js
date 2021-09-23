@@ -5,6 +5,7 @@ import CardWidget from '../../Components/Card/CardWidget';
 
 const Dashboard = () => {
 	const hey = <FontAwesomeIcon icon={faDollarSign} className="fa-w-9 fa-2x text-gray-200" />;
+	
 	return (		
 			<div className="container mt-5">
 				<div className="row">

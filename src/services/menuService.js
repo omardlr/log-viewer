@@ -5,9 +5,9 @@ const menuService = {
 				id: 1,
 				section: 'Section 1',
 				items: [
-					{ id: 1, text: 'Home', to: '/', exact: true, icon: 'home' },
-					{ id: 2, text: 'User', to: '/User', icon: 'user' },
-					{ id: 3, text: 'General Settings', to: '/Settings', icon: 'settings'}
+					{ id: 1, text: 'Home', to: `${process.env.PUBLIC_URL}/`, exact: true, icon: 'home' },
+					{ id: 2, text: 'User', to: `${process.env.PUBLIC_URL}/User`, icon: 'user' },
+					{ id: 3, text: 'General Settings', to: `${process.env.PUBLIC_URL}/Settings`, icon: 'settings'}
 				],
 			},
 			{

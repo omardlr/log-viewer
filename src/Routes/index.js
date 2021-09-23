@@ -7,17 +7,17 @@ import Settings from '../Pages/settings/index';
 import Detail from '../Pages/settings/Detail';
 
 //Only test
-import Test from '../Pages/Test/index';
+//import Test from '../Pages/Test/index';
 
 const Routes = () => {
 	return (
 		<Switch>
 			{/* <Route path="/" exact component={SignIn} /> */}
-			<Route path="/" exact component={Dashboard} isPrivate />
-			<Route path="/user" component={Dashboard} isPrivate />
-			<Route path="/Settings" exact component={Settings} isPrivate />
-			<Route path="/Settings/Edit/:id" exact component={Detail} isPrivate />
-			<Route path="/Test/" exact component={Test} isPrivate />
+			<Route path={`${process.env.PUBLIC_URL}/`} exact component={Dashboard} isPrivate />
+			<Route path={`${process.env.PUBLIC_URL}/user`} component={Dashboard} isPrivate />
+			<Route path={`${process.env.PUBLIC_URL}/Settings`} exact component={Settings} isPrivate />
+			<Route path={`${process.env.PUBLIC_URL}/Settings/Detail/:id`} exact component={Detail} isPrivate />
+			{/*<Route path="/Test/" exact component={Test} isPrivate />}
 
 			{/* redirect user to SignIn page if route does not exist and user is not authenticated */}
 			{/*<Route component={SignIn} />*/}

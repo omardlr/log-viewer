@@ -8,13 +8,13 @@ import Sidebar from '../Siderbar/index';
 const AuthLayout = ({ children }) => {
 	return (
 		<>
-			<NavbarTop appName="Web Aplication" />
+			<NavbarTop appName="Log Viewer" />
 			<div id="layoutSidenav">
 				<Sidebar userFullName="José Maldonado" />
 				<div id="layoutSidenav_content">
 					<main>
 						<HeaderCompact title="Dashboard" icon="activity" />
-						<div class="container-xl px-4">
+						<div className="container-xl px-4">
 						{children}
 						</div>
 					</main>

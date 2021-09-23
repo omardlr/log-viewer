@@ -1,68 +1,46 @@
 const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
   }
-
-const settingsSevice =  {
+//http://localhost:5000/api/
+//http://w12ocvmlabofv:7203/SystemConfigApi/api/
+const settingsService =  {
+    Base_Url: "http://w12ocvmlabofv:7203/SystemConfigApi/api/",
     GetSettings: async () => {
         //Simulate Request Delay
-        await sleep(2000); 
-        return [
-            {
-                id: 1,
-                sistema: "OFV",
-                modulo: "BIZAGI",
-                seccion: "PROVINCIAS",
-                estado: 1
-            },
-            {
-                id: 2,
-                sistema: "OFV",
-                modulo: "BIZAGI",
-                seccion: "LISTADO_BANCOS",
-                estado: 1
-            }
-        ];      
+        await sleep(500); 
+        
+        return fetch(`${settingsService.Base_Url}SystemConfiguration`)
+        .then(response => response.json());     
     },
 
     GetSettingsDetail: async (IdConfiguracion) => {
         //Simulate Request Delay
-        await sleep(2000);
-        const mockData =  [
-            {
-                id: 1,
-                idconfiguracion: 1,
-                llave: "1",
-                valor: "San Juan",
-                codref: "",
-                estado: 1
-            },
-            {
-                id: 2,
-                idconfiguracion: 1,
-                llave: "2",
-                valor: "La Romana",
-                codref: "",
-                estado: 1
-            },
-            {
-                id: 3,
-                idconfiguracion: 1,
-                llave: "3",
-                valor: "Hato Mayor",
-                codref: "",
-                estado: 1
-            },
-            {
-                id: 4,
-                idconfiguracion: 1,
-                llave: "4",
-                valor: "San Pedro",
-                codref: "",
-                estado: 1
+        await sleep(500);
+
+        return fetch(`${settingsService.Base_Url}SystemConfiguration/${IdConfiguracion}/true`)
+        .then(response => response.json());
+
+    },
+
+    InsertNewDetail: async (DetalleId, Codigo, Valor, CodigoReferencia) => {
+        const data = {
+            "idConfiguracion": DetalleId,
+            "codigo": Codigo,
+            "valor": Valor,
+            "codigoRef": CodigoReferencia
+        }
+
+        const options = {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
             }
-        ];
-        return mockData.filter(itm => itm.idconfiguracion = IdConfiguracion);
+        }
+
+        return fetch(`${settingsService.Base_Url}SystemConfiguration/Details`, options)
+            .then(res => res.text());
     }
 }
 
-export default settingsSevice;
+export default settingsService;

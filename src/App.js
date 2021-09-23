@@ -43,7 +43,7 @@ const App = () =>{
 		});
 
 		// Scrolls to an offset anchor when a sticky nav link is clicked
-		$('.nav-sticky a.nav-link[href*="#"]:not([href="#"])').click(function () {
+		$('.nav-sticky a.nav-link[href*="#"]:not([href="#"])').on("click",function () {
 			if (
 				window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
 				window.location.hostname === this.hostname
@@ -63,7 +63,7 @@ const App = () =>{
 		});
 
 		// Click to collapse responsive sidebar
-		$('#layoutSidenav_content').click(function () {
+		$('#layoutSidenav_content').on("click",function () {
 			// const BOOTSTRAP_LG_WIDTH = 992;
 			if (window.innerWidth >= 992) {
 				return;
